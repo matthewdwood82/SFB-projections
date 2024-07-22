@@ -359,4 +359,4 @@ df_players <- tibble::tibble(sleeper_id = c(
   # unnests the stats lists inside player_data to columns 
   tidyr::unnest_wider(`player_data-stats`)
 
-readr::write_csv(df_players, file = stringr::str_c("./dat/", stringr::str_replace_all(Sys.Date(), "-", "_"), "player_projections.csv"))
+readr::write_csv(df_players, file = stringr::str_c("./dat/", stringr::str_replace_all(Sys.Date(), "-", "_"), "_player_projections.csv"))
