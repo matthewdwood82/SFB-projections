@@ -1,0 +1,49 @@
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+  # pull_request:
+  #   branches: [main, master]
+  schedule:
+    # 11.30a EDT TUE (in UTC) for SUN & MON 8p gamescore updates and final stat corrections
+    - cron: '30 15 * 9-12,1-2 2'
+    
+    
+name: Update Scores
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+        
+      - name: Select R Version
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.4.0' # The R version to download (if necessary) and use.
+          
+      # - name: Install system dependencies
+      #   uses: r-lib/actions/setup-r-dependencies@v2
+      - name: Install system dependencies
+        run: sudo apt install libcurl4-openssl-dev
+        
+      - name: Load Dependencies
+        uses: r-lib/actions/setup-renv@v2
+        with:
+          cache-version: 1      
+          
+      - name: Run Score Updates
+        shell: Rscript {0}
+        run: source("main.R")
+        
+      - name: Save Score CSV
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Save new score file
+          branch: main
+          commit_options: '--no-verify --signoff'
+          file_pattern: '*.csv dat/*.csv *.txt dat/*.txt'
+          
