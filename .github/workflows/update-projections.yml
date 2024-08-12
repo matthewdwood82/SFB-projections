@@ -45,5 +45,5 @@ jobs:
           commit_message: Save new score file
           branch: main
           commit_options: '--no-verify --signoff'
-          file_pattern: '*.csv dat/*.csv *.txt dat/*.txt'
+          file_pattern: '*.csv dat/*.csv'
           
