@@ -5,8 +5,8 @@ on:
   # pull_request:
   #   branches: [main, master]
   schedule:
-    # 11.30a EDT TUE (in UTC) for SUN & MON 8p gamescore updates and final stat corrections
-    - cron: '30 15 * 9-12,1-2 2'
+    # 8.30a EST TUE for SUN & MON 8p gamescore updates and final stat corrections
+    - cron: '30 12 * 7-12,1-2 2'
     
     
 name: Update Scores
@@ -45,5 +45,5 @@ jobs:
           commit_message: Save new score file
           branch: main
           commit_options: '--no-verify --signoff'
-          file_pattern: '*.csv dat/*.csv *.txt dat/*.txt'
+          file_pattern: '*.csv dat/*.csv'
           
