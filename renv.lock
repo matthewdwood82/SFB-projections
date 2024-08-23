@@ -86,7 +86,7 @@
     },
     "checkmate": {
       "Package": "checkmate",
-      "Version": "2.3.1",
+      "Version": "2.3.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -94,7 +94,7 @@
         "backports",
         "utils"
       ],
-      "Hash": "c01cab1cb0f9125211a6fc99d540e315"
+      "Hash": "0e14e01ce07e7c88fd25de6d4260d26b"
     },
     "cli": {
       "Package": "cli",
@@ -286,15 +286,15 @@
       "Version": "1.8.9",
       "Source": "GitHub",
       "RemoteType": "github",
-      "RemoteHost": "api.github.com",
       "RemoteUsername": "jeroen",
       "RemoteRepo": "jsonlite",
       "RemoteRef": "master",
-      "RemoteSha": "fe7a5c30002a7c26c74a7c4a5152e056cac15213",
+      "RemoteSha": "f504a0f7dd2c50fb71ec3cf524f014f84f14482e",
+      "RemoteHost": "api.github.com",
       "Requirements": [
         "methods"
       ],
-      "Hash": "0325299469d5d5a7cee96334dd8e89bb"
+      "Hash": "0d67560189df6d238f18b3357f241ad3"
     },
     "lifecycle": {
       "Package": "lifecycle",
@@ -342,7 +342,7 @@
     },
     "nflreadr": {
       "Package": "nflreadr",
-      "Version": "1.4.0",
+      "Version": "1.4.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -359,17 +359,17 @@
         "tools",
         "utils"
       ],
-      "Hash": "5c23fa0a11e01ecc91d1ba618551e186"
+      "Hash": "5436aacb9c783a73d265009f5a82f968"
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.2.0",
+      "Version": "2.2.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "askpass"
       ],
-      "Hash": "2bcca3848e4734eb3b16103bc9aa4b8e"
+      "Hash": "c62edf62de70cadf40553e10c739049d"
     },
     "pillar": {
       "Package": "pillar",
@@ -659,7 +659,7 @@
     },
     "withr": {
       "Package": "withr",
-      "Version": "3.0.0",
+      "Version": "3.0.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -667,7 +667,7 @@
         "grDevices",
         "graphics"
       ],
-      "Hash": "d31b6c62c10dcf11ec530ca6b0dd5d35"
+      "Hash": "07909200e8bbe90426fbfeb73e1e27aa"
     },
     "writexl": {
       "Package": "writexl",
